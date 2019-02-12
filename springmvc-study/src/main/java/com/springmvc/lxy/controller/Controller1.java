@@ -41,6 +41,19 @@ public class Controller1 {
     }
 
     /**
+     * 测试 get方法，list类型
+     */
+    @RequestMapping(value = "/get4list", method = RequestMethod.GET)
+    public ResponseEntity<?> TestSpringMvcGETList(HttpServletRequest request, TestSpringMvc req) {
+        LOG.info("测试 get方法 cityIdList starts.");
+
+        String cityIdList = request.getParameter("cityIdList");
+
+        LOG.info("测试 get方法 cityIdList ends.{}",cityIdList);
+        return new ResponseEntity<>(req,HttpStatus.OK);
+    }
+
+    /**
      * 测试 get方法 序列化时间类型
      */
     @RequestMapping(value = "/get", method = RequestMethod.GET)
