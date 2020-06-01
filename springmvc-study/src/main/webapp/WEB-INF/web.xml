@@ -8,6 +8,14 @@
             /WEB-INF/spring/context-config.xml
         </param-value>
     </context-param>
+
+    <!--<context-param>-->
+        <!--<param-name>contextConfigLocation</param-name>-->
+        <!--<param-value>-->
+            <!--classpath*:config/spring/springstudy-biz-*.xml,-->
+        <!--</param-value>-->
+    <!--</context-param>-->
+    <!---->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
