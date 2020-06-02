@@ -1,6 +1,4 @@
-package suanfa;
-
-import java.util.List;
+package suanfa.may31;
 
 /**
  * @auther eleme

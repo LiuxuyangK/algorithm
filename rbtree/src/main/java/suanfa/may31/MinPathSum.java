@@ -1,8 +1,4 @@
-package suanfa;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package suanfa.may31;
 
 /**
  * @auther eleme
