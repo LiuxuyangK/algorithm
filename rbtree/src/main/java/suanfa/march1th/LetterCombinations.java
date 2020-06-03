@@ -1,6 +1,7 @@
 package suanfa.march1th;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -17,6 +18,41 @@ public class LetterCombinations {
     }
 
     String[] numLetter = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
+
+//    另外还有两种很好的方法：
+//    https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/8064/My-java-solution-with-FIFO-queue
+
+    public List<String> letterCombinations1(String digits) {
+        LinkedList<String> ans = new LinkedList<String>();
+        if (digits.isEmpty()) return ans;
+        String[] mapping = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        ans.add("");
+        for (int i = 0; i < digits.length(); i++) {
+            int x = Character.getNumericValue(digits.charAt(i));
+            while (ans.peek().length() == i) {
+                String t = ans.remove();
+                for (char s : mapping[x].toCharArray())
+                    ans.add(t + s);
+            }
+        }
+        return ans;
+    }
+
+    public List<String> letterCombinations2(String digits) {
+        LinkedList<String> ans = new LinkedList<String>();
+        if (digits.isEmpty()) return ans;
+        String[] mapping = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        ans.add("");
+        while (ans.peek().length() != digits.length()) {
+            String remove = ans.remove();
+            String map = mapping[digits.charAt(remove.length()) - '0'];
+            for (char c : map.toCharArray()) {
+                ans.addLast(remove + c);
+            }
+        }
+        return ans;
+    }
 
     public List<String> letterCombinations(String digits) {
         if (digits == null || digits.length() == 0) {
