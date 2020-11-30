@@ -1,7 +1,4 @@
-package suanfa.march3rd;
-
-import java.util.Arrays;
-import java.util.stream.Stream;
+package suanfa.year_2020.march3rd;
 
 /**
  * @auther eleme

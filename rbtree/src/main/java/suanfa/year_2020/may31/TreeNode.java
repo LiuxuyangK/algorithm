@@ -1,4 +1,4 @@
-package suanfa.may31;
+package suanfa.year_2020.may31;
 
 public class TreeNode {
     public int val;

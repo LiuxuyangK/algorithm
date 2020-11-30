@@ -1,6 +1,6 @@
-package suanfa.march2nd;
+package suanfa.year_2020.march2nd;
 
-import suanfa.may31.TreeNode;
+import suanfa.year_2020.may31.TreeNode;
 
 /**
  * @auther eleme

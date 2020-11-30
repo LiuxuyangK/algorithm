@@ -1,3 +1,5 @@
+package suanfa.rbtree_exam;
+
 /**
  * Java 语言: 红黑树
  *

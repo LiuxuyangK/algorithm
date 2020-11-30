@@ -1,3 +1,5 @@
+package suanfa.rbtree_exam;
+
 /**
  * Java 语言: 二叉查找树
  *
